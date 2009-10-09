@@ -1,4 +1,4 @@
-invlist -- invreted index toy program
+invlist_and -- invreted index toy program
   by Yoshihiko Suhara (sleepy_yoshi)
 
 
@@ -14,7 +14,7 @@ You must change the current directory to the directory that has index files.
 % cd index
 % ls
 foo fuga hoge piyo
-% ../invlist foo fuga hoge piyo
+% ../invlist_and foo fuga hoge piyo
 inverted lists for input query ===
 foo -> 7: 1 5 6 7 8 9 10
 fuga -> 3: 1 4 5
