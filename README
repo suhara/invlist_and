@@ -1,0 +1,53 @@
+invlist -- invreted index toy program
+  by Yoshihiko Suhara (sleepy_yoshi)
+
+
+* About
+This program is a toy program, which aims to help to someone who studies
+about search engines, especially AND retrieval with inverted indexes.
+
+
+* How to use?
+You must change the current directory to the directory that has index files.
+
+===
+% cd index
+% ls
+foo fuga hoge piyo
+% ../invlist foo fuga hoge piyo
+inverted lists for input query ===
+foo -> 7: 1 5 6 7 8 9 10
+fuga -> 3: 1 4 5
+hoge -> 5: 1 2 3 4 5
+piyo -> 2: 4 5
+
+ordered list===
+piyo -> 2: 4 5
+fuga -> 3: 1 4 5
+hoge -> 5: 1 2 3 4 5
+foo -> 7: 1 5 6 7 8 9 10
+
+Intersection of piyo and fuga: 4 5
+Intersection of last result and hoge: 4 5
+Intersection of last result and foo: 5
+
+search result ===
+result num: 1
+5
+===
+
+
+* Index format
+===
+% cat hoge
+5 1 2 3 4 5
+===
+First number '5' means document frequency (DF) of this inverted list.
+Following numbers indicate document IDs that contain the word 'hoge'.
+
+
+* See also
+There's more details about this program in a blog article below. (in Japanese)
+http://d.hatena.ne.jp/sleepy_yoshi/20091009/p1
+
+
